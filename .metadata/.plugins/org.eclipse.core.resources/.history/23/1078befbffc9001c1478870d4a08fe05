@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<form method="GET" action="/TestApp/HW">	
+	<input type="text" name="username"/>
+	<input type="password" name="password" />
+	<submit value="Submit"/>
+
+</form>
+
+
+</body>
+</html>
