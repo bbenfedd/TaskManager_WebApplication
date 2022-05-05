@@ -1,7 +1,7 @@
 # TaskManager_WebApplication  
-##Back-End :  
+### Back-End :  
 Spring boot - Java Persistence API (JPA)  
 
-##Front-End :  
+### Front-End :  
 HTML - CSS - JavaScript - ReactJS
 
