@@ -3,5 +3,5 @@
 Spring boot - Java Persistence API (JPA)  
 
 ### Front-End :  
-HTML - CSS - JavaScript - ReactJS
+HTML - CSS/W3.CSS - JavaScript - ReactJS
 
