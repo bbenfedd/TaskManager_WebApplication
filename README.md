@@ -1,2 +1,4 @@
 # TaskManager_WebApplication
-Java EE - Servlet - ReactJS
+Back-End : Spring boot - Java Persistence API (JPA)
+Front-End : HTML - CSS - JavaScript - ReactJS
+
