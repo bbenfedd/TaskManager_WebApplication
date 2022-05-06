@@ -23,7 +23,7 @@ public class ProjectService {
     }
 
     public void addNewProject(Project project) {
-    
+
         List<Project> projects = projectRepository.findAll();
 
         for(Project projet : projects){
