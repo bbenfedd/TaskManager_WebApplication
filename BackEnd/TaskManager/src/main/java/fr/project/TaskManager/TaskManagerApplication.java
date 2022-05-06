@@ -16,10 +16,5 @@ public class TaskManagerApplication {
 		SpringApplication.run(TaskManagerApplication.class, args);
 	}
 
-	@GetMapping
-	public List<Project> sayHello(){
-		return List.of(new Project(1,"Task Manager","Task Manager Description "),
-				new Project(2,"Hotel Manager","Hotel Manager Description ")
-				);
-	}
+
 }

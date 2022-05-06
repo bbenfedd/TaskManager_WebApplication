@@ -3,11 +3,21 @@ package fr.project.TaskManager.Projects;
 //import javax.persistence.*;
 
 
-//@Entity
+import javax.persistence.*;
+
+@Entity
+@Table
 public class Project {
-    //@Id
-    //@GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    @Id
+    @SequenceGenerator(
+            name = "project_sequence",
+            sequenceName =  "project_sequence",
+            allocationSize =  1
+    )
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+                    generator = "project_sequence"
+    )
+    private Long id;
     // Nom du projet
     private String name;
     // Description du projet
@@ -28,17 +38,17 @@ public class Project {
         this.description = description;
     }
 
-    public Project(int id, String name, String description) {
+    public Project(Long id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
