@@ -1,7 +1,7 @@
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     // Nom de l'utilisateur
     private String name;
     // email de l'utilisateur

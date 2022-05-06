@@ -2,7 +2,7 @@
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     // Nom du projet
     private String name;
     // Description du projet

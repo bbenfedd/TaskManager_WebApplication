@@ -1,7 +1,7 @@
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     // Nom de la tâche
     private String name;
     // Description de la tâche
