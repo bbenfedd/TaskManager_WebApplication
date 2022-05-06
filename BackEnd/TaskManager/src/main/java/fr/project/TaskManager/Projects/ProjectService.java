@@ -21,4 +21,20 @@ public class ProjectService {
        return projectRepository.findAll();
 
     }
+
+    public void addNewProject(Project project) {
+    
+        List<Project> projects = projectRepository.findAll();
+
+        for(Project projet : projects){
+            if(projet.getName().equals(project.getName())){
+                throw new IllegalStateException("Project name already exsit !");
+                
+            }
+        }
+
+
+        projectRepository.save(project);
+
+    }
 }
