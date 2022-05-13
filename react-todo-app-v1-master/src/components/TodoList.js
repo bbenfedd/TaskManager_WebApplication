@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import TodoForm from './TodoForm';
 import Todo from './Todo';
-import Appform from '../Appform';
-import GetComp from '../BackEndComponents/GetComp';
-import 'w3-css/w3.css';
 
+function TodoList() {
+  
+  
 
-function TodoList(props) {
   const [todos, setTodos] = useState([]);
 
   const addTodo = todo => {
@@ -18,12 +17,6 @@ function TodoList(props) {
 
     setTodos(newTodos);
     console.log(...todos);
-    ReactDOM.render(
-      <React.StrictMode>
-        <Appform />
-      </React.StrictMode>,
-      document.getElementById('root')
-    );
   };
 
   const updateTodo = (todoId, newValue) => {
@@ -49,25 +42,17 @@ function TodoList(props) {
     });
     setTodos(updatedTodos);
   };
+
   return (
     <>
-        <div className="w3-row">
-          <div className="w3-twothird w3-container ">
-            <h1 style={{fontSize:"32px"}} >{props.name}</h1>
-          </div>
-          <div className='buttonlist w3-third w3-container'>
-              <button style={{margin:"8px 7px"}} className="todo-button" onClick={() => addTodo({ text: 'New Todo' })}>Add Todo</button>
-          </div>
-        </div>
-      
+      <h1>What's the Plan for Today?</h1>
+      <TodoForm onSubmit={addTodo} />
       <Todo
         todos={todos}
         completeTodo={completeTodo}
         removeTodo={removeTodo}
         updateTodo={updateTodo}
       />
-
-      <GetComp />
     </>
   );
 }

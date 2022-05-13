@@ -6,7 +6,8 @@ import 'w3-css/w3.css';
 
 export default class GetComp extends Component {
   state = {
-    persons: []
+    persons: [],
+    tasks : []
   }
 
   componentDidMount() {
@@ -14,6 +15,12 @@ export default class GetComp extends Component {
       .then(res => {
         const persons = res.data;
         this.setState({ persons });
+      })
+
+      axios.get('http://localhost:8080/api/tasks')
+      .then(res => {
+        const tasks = res.data;
+        this.setState({ tasks });;
       })
   }
 
@@ -31,7 +38,7 @@ export default class GetComp extends Component {
                     
                     
                     <div style={{paddingLeft:"4px"}} >
-                    <button style={{fontSize: "10px",padding: "4px 8px",marginLeft:"8px",marginRight: "67%"}} class="w3-button w3-red w3-round-large">{this.state.persons.length}</button>
+                    <button style={{fontSize: "10px",padding: "4px 8px",marginLeft:"8px",marginRight: "67%"}} class="w3-button w3-red w3-round-large">{this.state.tasks.length}</button>
                     
                   </div>
                     
