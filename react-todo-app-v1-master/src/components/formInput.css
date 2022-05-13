@@ -1,7 +1,15 @@
+
+
 .formInput{
     display: flex;
     flex-direction: column;
-    width: 280px;
+    width: 633px;
+}
+.formInput_desc{
+    display: flex;
+    flex-direction: column;
+    width: 633px;
+    height: 211px;
 }
 
 input{

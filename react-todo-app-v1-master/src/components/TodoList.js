@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import TodoForm from './TodoForm';
 import Todo from './Todo';
 import Appform from '../Appform';
+import GetComp from '../BackEndComponents/GetComp';
+import 'w3-css/w3.css';
+
 
 function TodoList(props) {
   const [todos, setTodos] = useState([]);
@@ -49,10 +51,14 @@ function TodoList(props) {
   };
   return (
     <>
-      <h1>{props.name}</h1>
-      <div className='buttonlist'>
-      <button className="todo-button" onClick={() => addTodo({ text: 'New Todo' })}>Add Todo</button>
-      </div>
+        <div className="w3-row">
+          <div className="w3-twothird w3-container ">
+            <h1 style={{fontSize:"32px"}} >{props.name}</h1>
+          </div>
+          <div className='buttonlist w3-third w3-container'>
+              <button style={{margin:"8px 7px"}} className="todo-button" onClick={() => addTodo({ text: 'New Todo' })}>Add Todo</button>
+          </div>
+        </div>
       
       <Todo
         todos={todos}
@@ -60,6 +66,8 @@ function TodoList(props) {
         removeTodo={removeTodo}
         updateTodo={updateTodo}
       />
+
+      <GetComp />
     </>
   );
 }
