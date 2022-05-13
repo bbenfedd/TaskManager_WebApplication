@@ -59,7 +59,7 @@ function TodoList(props) {
   };
   return (
     <>
-        <div className="w3-row">
+        <div className="w3-row" style={{marginBottom:" 24px"}}>
           <div className="w3-twothird w3-container ">
             <h1 style={{fontSize:"32px"}} >{props.name}</h1>
           </div>

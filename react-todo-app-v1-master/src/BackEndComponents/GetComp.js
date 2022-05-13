@@ -29,17 +29,23 @@ export default class GetComp extends Component {
       
          this.state.persons.map(person => 
         
-        <div className=" w3-round w3-white w3-row"  style={{marginBottom:"18px",padding:"12px 30px 12px 5px"}}>
+        <div className=" w3-round w3-white w3-row"  style={{marginBottom:"18px",
+        padding:"12px 30px 12px 5px",display: "flex",    alignItems: "center" ,width: "88%",marginLeft: "5%"}}>
 			  
                     <div  className="w3-threequarter w3-container " >
                 
                    
-                      <p style={{textAlign:"left"}}>{person.name} </p>
+                      <p style={{textAlign:"left"}} >{person.name} </p>
                     
                     
-                    <div style={{paddingLeft:"4px"}} >
-                    <button style={{fontSize: "10px",padding: "4px 8px",marginLeft:"8px",marginRight: "67%"}} class="w3-button w3-red w3-round-large">{this.state.tasks.length}</button>
-                    
+                    <div className="w3-row" style={{      marginTop: "10px",  width: "65px"}}>
+                      <div className="w3-quarter w3-container" style={{paddingLeft: "0px"}}>
+                    <button style={{fontSize: "13px",padding: "4px 11px",marginLeft:"8px",marginRight: "67%"}} className="w3-button w3-light-blue  w3-round-large">{this.state.tasks.length}</button>
+                    </div>
+                    <div className=" w3-quarter w3-container">
+                    <button style={{fontSize: "13px",padding: "4px 11px",marginLeft:"8px",marginRight: "67%"}} className="w3-button w3-blue w3-round-large">{this.state.tasks.length}</button>
+                 </div>
+                 
                   </div>
                     
                     

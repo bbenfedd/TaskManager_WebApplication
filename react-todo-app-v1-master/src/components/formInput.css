@@ -3,13 +3,13 @@
 .formInput{
     display: flex;
     flex-direction: column;
-    width: 633px;
+    width: 100%;
 }
 .formInput_desc{
     display: flex;
     flex-direction: column;
-    width: 633px;
     height: 211px;
+    width: 100%;
 }
 
 input{

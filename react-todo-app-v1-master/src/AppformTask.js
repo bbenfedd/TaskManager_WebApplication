@@ -4,8 +4,7 @@ import "./App.css";
 import ReactDOM from "react-dom";
 import App from "./App";
 import axios from 'axios';
-import PostComp from './BackEndComponents/PostComp.js';
-import './components/formInput.css';
+import PostCompTasks from './BackEndComponents/PostCompTasks.js';
 
 
 const Appform = () => {
@@ -87,8 +86,8 @@ const Appform = () => {
   };
 
   return (
-    <div className="app">
-      <PostComp />
+    <div className="appform">
+      <PostCompTasks />
     </div>
   );
 };
